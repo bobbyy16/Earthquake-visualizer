@@ -14,7 +14,7 @@ A real-time earthquake monitoring dashboard built with React that visualizes glo
 
 ## 🚀 Demo
 
-Visit the live demo: [Your Demo Link Here]
+Visit the live demo: [Your Demo Link Here](https://www.loom.com/share/9d721392cce24bf8a65a7c693b4feb07)
 
 ## 🛠️ Tech Stack
 
