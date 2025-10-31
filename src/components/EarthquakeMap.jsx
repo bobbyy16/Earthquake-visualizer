@@ -19,21 +19,36 @@ const EarthquakeMap = ({
 }) => {
   return (
     <Card className="lg:col-span-2 bg-slate-800 border-slate-700">
-      <CardHeader>
-        <CardTitle>Global Seismic Activity</CardTitle>
-        <CardDescription>Click on markers for details</CardDescription>
+      <CardHeader className="px-4 py-4 sm:px-6 sm:py-6">
+        <CardTitle className="text-lg sm:text-xl md:text-2xl">
+          Global Seismic Activity
+        </CardTitle>
+        <CardDescription className="text-sm sm:text-base">
+          Click on markers for details
+        </CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="px-4 sm:px-6">
         <Tabs value={selectedMagnitude} onValueChange={onMagnitudeChange}>
-          <TabsList className="mb-4 bg-slate-900">
-            <TabsTrigger value="all">All</TabsTrigger>
-            <TabsTrigger value="major">Major (5+)</TabsTrigger>
-            <TabsTrigger value="moderate">Moderate (3-5)</TabsTrigger>
-            <TabsTrigger value="minor">Minor (&lt;3)</TabsTrigger>
+          <TabsList className="mb-4 bg-slate-900 grid grid-cols-2 sm:grid-cols-4 w-full sm:w-auto h-auto">
+            <TabsTrigger value="all" className="text-xs sm:text-sm px-2 py-2">
+              All
+            </TabsTrigger>
+            <TabsTrigger value="major" className="text-xs sm:text-sm px-2 py-2">
+              Major (5+)
+            </TabsTrigger>
+            <TabsTrigger
+              value="moderate"
+              className="text-xs sm:text-sm px-2 py-2"
+            >
+              Moderate (3-5)
+            </TabsTrigger>
+            <TabsTrigger value="minor" className="text-xs sm:text-sm px-2 py-2">
+              Minor (&lt;3)
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value={selectedMagnitude} className="mt-0">
-            <div className="h-[500px] rounded-lg overflow-hidden">
+            <div className="h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] rounded-lg overflow-hidden">
               <MapContainer
                 center={[20, 0]}
                 zoom={2}
