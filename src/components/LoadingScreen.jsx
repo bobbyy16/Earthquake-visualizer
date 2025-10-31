@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, CardContent } from "./ui/card";
-import { Activity } from "lucide-react";
 
 const LoadingScreen = () => {
   return (
@@ -8,10 +7,12 @@ const LoadingScreen = () => {
       <Card className="w-64">
         <CardContent className="pt-6">
           <div className="flex flex-col items-center gap-4">
-            <Activity className="w-12 h-12 animate-pulse text-blue-500" />
-            <p className="text-sm text-muted-foreground">
-              Loading earthquake data...
-            </p>
+            <img
+              src="/icon.png"
+              alt="Earthquake Visualizer"
+              className="w-12 h-12 animate-pulse"
+            />
+            <p className="text-sm text-white">Loading earthquake data...</p>
           </div>
         </CardContent>
       </Card>
